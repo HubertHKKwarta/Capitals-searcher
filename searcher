@@ -1,0 +1,72 @@
+print("Jest to słownik przechowujący stolice państw.")
+print("Aktualnie w swojej bazie posiadamy stolice państw europy.")
+print("Państwa proszę wpisywać z dużej litery")
+countries = {"Polska": "Warszawa", 
+"Niemcy": "Berlin", 
+"Francja": "Paryż", 
+"Włochy": "Rzym", 
+"Anglia": "Londyn",
+"Albania":"Tirana",
+"Andora":"Andora",
+"Austria":"Wiedeń",
+"Belgia":"Bruksela",
+"Białoruś":"Mińsk",
+"Bośnia i Hercegowina":"Sarajewo",
+"Bułgaria":"Sofia",
+"Chorwacja":"Zagrzeb",
+"Czarnogóra":"Podgorica",
+"Czechy":"Praga",
+"Dania":"Kopenhaga",
+"Estonia":"Tallin",
+"Finlandia":"Helsinki",
+"Grecja":"Ateny",
+"Hiszpania":"Madryt",
+"Holandia":"Amsterdam",
+"Irlandia":"Dublin",
+"Islandia":"Rejkiawik",
+"Liechtenstein":"Vaduz",
+"Litwa":"Wilno",
+"Luksemburg":"Luksemburg",
+"Łotwa":"Ryga",
+"Macedonia":"Skopie",
+"Malta":"Vallletta",
+"Mołdawia":"Kiszyniów",
+"Monako":"Monako",
+"Norwegia":"Oslo",
+"Portugalia":"Lizbona",
+"Rosja":"Moskwa",
+"Rumunia":"Bukareszt",
+"San Marino":"San Marino",
+"Słowacja":"Bratysława",
+"Słowenia":"Lublana",
+"Szwajcaria":"Berno",
+"Szwecja":"Sztokholm",
+"Ukraina":"Kijów",
+"Watykan":"Watykan",
+"Węgry":"Budapeszt",}
+
+def get_countries():
+    while True:
+        name= input("Proszę podać państwo szukanej stolicy:\n")
+        if name in countries:
+            stolica=countries[name]
+            print("Stolicą szukanego Państwa jest: ",stolica)
+            return True
+        else:
+            print("Podanego państwa nie ma w słowniku!")
+            return True
+
+def kontynuacja():
+    action = input("Czy chcesz koontynuoać? Wpisz t/n: ")
+    if action == "n":
+        print("Miłego dnia")
+        return False
+    elif action == "t":
+        return True
+    else:  
+        return False
+
+ok = True
+while ok:
+    get_countries()
+    ok = kontynuacja()
